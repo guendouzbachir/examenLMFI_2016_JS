@@ -1,0 +1,19 @@
+<div class="form-group">
+    <form class="form-inline">
+        <div class="form-horizontal">
+            <div class="container">
+                <div class="jumbotron">
+                    <h2>Add a Todo</h2>
+                    <label for="inputOne">Name :</label>
+                    <input #newTodo class="form-control" placeholder="Name" required id="inputOne" type="text"/>
+
+                    <button id="newTodoId" class="btn btn-success glyphicon glyphicon-floppy-disk"  (click)="addTodo(newTodo.value); newTodo.value=''">
+
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
+
